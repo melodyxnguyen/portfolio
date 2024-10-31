@@ -666,40 +666,43 @@ textarea.input-field {
   .project-card { --padding: 68px; }
 
 
+  /* Basic styling for the gallery */
 
-  
-/* Gallery Section */
+
 .gallery-section {
-  padding: 20px;
-  display: flex;
-  justify-content: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .gallery {
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusts based on screen size */
-  width: 100%;
-  max-width: 800px; /* Maximum width for larger screens */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
 }
 
 .gallery-item {
   overflow: hidden;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-item img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  display: block;
+  transition: transform 0.3s ease;
 }
 
-/* Media query for larger screens */
-@media (min-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Slightly larger images on tablet/desktop */
-  }
+.gallery-item img:hover {
+  transform: scale(1.05);
 }
 
 
