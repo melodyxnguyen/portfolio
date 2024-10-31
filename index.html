@@ -48,14 +48,14 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <img src="./assets/images/Melody1.png" width="64" height="24" alt="Melody home">
+        <img src="./assets/images/Melody1.png" width="90" height="50" alt="Melody home">
       </a>
 
       <nav class="navbar" data-navbar>
 
         <div class="navbar-top">
           <a href="#" class="logo">
-            <img src="./assets/images/logo-light.svg" width="64" height="24" alt="Melody home">
+            <img src="./assets/images/whitelogo.png" width="90" height="50" alt="Melody home">
           </a>
 
           <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
@@ -90,7 +90,7 @@
         <div class="wrapper">
           <a href="mailto:melody.nguyen@pace.edu" class="contact-link">melody.nguyen@pace.edu</a>
 
-          <a href="tel:001234567890" class="contact-link">01 (669) 240 99 76</a>
+          <a href="tel:(669) 240 9976" class="contact-link">(669) 240 9976</a>
         </div>
 
         <ul class="social-list">
@@ -98,6 +98,12 @@
           <li>
             <a href="https://www.linkedin.com/in/melodyxnguyen/" class="social-link" target="_blank" rel="noopener noreferrer">
               <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/@melodyxnguyen" class="social-link" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-youtube"></ion-icon>
             </a>
           </li>
 
@@ -110,12 +116,6 @@
           <li>
             <a href="https://medium.com/@melodyxnguyen" class="social-link" target="_blank" rel="noopener noreferrer">
               <ion-icon name="logo-medium"></ion-icon>
-            </a>
-          </li>
-        
-          <li>
-            <a href="https://www.youtube.com/@melodyxnguyen" class="social-link" target="_blank" rel="noopener noreferrer">
-              <ion-icon name="logo-youtube"></ion-icon>
             </a>
           </li>
 
@@ -135,7 +135,6 @@
 
 
 
-
   <main>
     <article>
 
@@ -146,11 +145,12 @@
       <section class="section hero" aria-label="home">
         <div class="container">
 
-          <figure class="hero-banner">
-            <img src="./assets/images/banner2.JPG" width="560" height="540" alt="Melody" 
-              data-reveal="top">
-
-          </figure>
+          <div style="flex: 0.5;" data-reveal="left">
+            <figure>
+              <img src="./assets/images/profile.jpg" alt="Melody Nguyen" style="width: 100%; border-radius: 5px;">
+              <figcaption style="text-align: center; font-style: italic; padding-top: 5px;">
+            </figure>
+          </div>
 
           <div class="hero-content">
 
@@ -163,9 +163,9 @@
             </p>
 
             <div class="btn-wrapper" data-reveal="top" data-reveal-delay="1s">
-              <a href="#" class="btn btn-primary">See My Works</a>
+              <a href="#" class="btn btn-primary">See Projects</a>
 
-              <a href="#" class="btn btn-secondary">Contact Me</a>
+              <a href="https://www.linkedin.com/in/melodyxnguyen/"  target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Contact Me</a>
             </div>
 
           </div>
@@ -175,31 +175,65 @@
 
 
 
+<!-- 
+  - #ABOUT
+-->
 
-      <section class="section about" aria-label="about">
-        <div class="container">
-      
-          <div class="wrapper" style="display: flex; align-items: flex-start; gap: 20px;">
-      
-            <div data-reveal="left" style="flex: 1;">
-              <h2 class="h2 section-title">About Me</h2>
-              <p class="section-text">
-                Growing up in the Bay Area, I’ve always been passionate about technology and sustainability. With over two years of experience at Stanford's SLAC National Energy Lab and the United Nations in NYC, I’ve explored the intersection of data and marketing. I help launch businesses and tell their stories through unique branding, analytics-driven strategies, and impactful content creation.
-              </p>
-            </div>
-      
-            <!-- Embedded YouTube video -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oxeknPHwEeU?si=QnxroPjky68wdui5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="flex: 1;"></iframe>
-      
-          </div>
-      
+<section class="section about" aria-label="about">
+  <div class="container">
+
+    <div class="wrapper">
+
+      <div data-reveal="left">
+        <h2 class="h2 section-title">About Me</h2>
+
+        <p class="section-text">
+          Growing up in the Bay Area, I was always passionate about trying anything and everything—a mindset that shaped how I met new people and shared stories.<br/>
+          <br/>As a business analytics, computer science, and digital marketing student at Pace University, I'm exploring a world where design and code come together — crafting digital experiences that connect and inspire.
+        </p>
+
+        <br/>
+
+        <div class="btn-wrapper" data-reveal="left" data-reveal-delay="1s">
+          <a href="#" class="btn btn-secondary">Download Resume</a>
         </div>
-      </section>      
-      
+      </div>
+
+      <!-- Right-aligned image carousel -->
+      <div style="flex: 0.5;" data-reveal="right">
+        <div class="carousel-container">
+          <div class="carousel">
+            <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+            
+            <div class="carousel-track-container">
+              <div class="carousel-track">
+                <img src="./assets/images/sf.JPG" alt="SF" class="carousel-slide">
+                <img src="./assets/images/ama.png" alt="AMA" class="carousel-slide">
+                <img src="./assets/images/running.jpg" alt="Running" class="carousel-slide">
+                <img src="./assets/images/fusion.JPG" alt="Fusion" class="carousel-slide">
+                <img src="./assets/images/un.jpeg" alt="United Nations" class="carousel-slide">
+                <img src="./assets/images/WE.png" alt="Empower" class="carousel-slide">
+                <img src="./assets/images/slac1.jpeg" alt="Intern" class="carousel-slide">
+              </div>
+            </div>
+            
+            <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
 
 
-      <!-- 
-        - #EXPERIENCE
+
+
+     <!-- 
+        - #SKILLS
       -->
 
       <section class="section about" aria-label="about">
@@ -208,11 +242,11 @@
           <div class="wrapper">
 
             <div data-reveal="left">
-              <h2 class="h2 section-title">Education & Skills</h2>
+              <h2 class="h2 section-title">Skills</h2>
 
               <p class="section-text">
-                
-                From building dynamic websites to producing high-quality videos and captivating graphics, my projects bring a unique blend of creativity and technical expertise to the digital landscape. 
+                From building dynamic websites to producing high-quality videos and captivating graphics, I have <strong>2 years</strong> of industry experience, building brands through analytics-driven strategies, unique storytelling, and practical customer implementation. 
+                <br/>
               </p>
             </div>
 
@@ -221,7 +255,7 @@
               <li class="progress-item">
 
                 <div class="label-wrapper">
-                  <p>Web Design</p>
+                  <p>Data Analytics</p>
 
                   <span class="span">90%</span>
                 </div>
@@ -235,7 +269,7 @@
               <li class="progress-item">
 
                 <div class="label-wrapper">
-                  <p>Data Analytics</p>
+                  <p>Web Design</p>
 
                   <span class="span">80%</span>
                 </div>
@@ -290,7 +324,7 @@
                 <h3 class="h4 card-title">Web Design</h3>
 
                 <p class="card-text">
-                  Designing user-friendly platforms with responsive layouts using HTML, CSS, and JavaScript to enhance brand engagement.
+                  Designing user-friendly platforms with responsive layouts using HTML, CSS, JavaScript and Drupal.
                 </p>
 
               </div>
@@ -306,7 +340,7 @@
                 <h3 class="h4 card-title">Data Analytics</h3>
 
                 <p class="card-text">
-                  Enhancing business performance with data-driven insights through forecasting and visualizations using SQL, R, Excel, Tableau, and Google Analytics.
+                  Data-driven research through forecasting and visualizations using Python, SQL, R, Excel, Tableau, and Google Analytics.
                 </p>
 
               </div>
@@ -323,7 +357,7 @@
                 <h3 class="h4 card-title">Digtial Marketing</h3>
 
                 <p class="card-text">
-                  Driving business growth with engaging graphics to reach target audiences through Davinci Resolve - Video Production, Adobe, Canva, Figma.
+                  Reach your target audiences with captivating videos and animations via Davinci Resolve, Adobe, Canva, and Figma.
                 </p>
 
               </div>
@@ -339,7 +373,7 @@
                 <h3 class="h4 card-title">Development</h3>
 
                 <p class="card-text">
-                  Specializing in front-end development and code management with GitHub, using languages like Python, Java, and C.
+                  Growing interest in technology transfers, code management, and front-end development via Java, C, and GitHub.
                 </p>
 
               </div>
@@ -349,6 +383,90 @@
 
         </div>
       </section>
+
+
+
+
+
+      <!-- 
+        - #EXPERIENCE
+      -->
+
+      <section class="section about" aria-label="about">
+        <div class="container">
+
+          <div class="wrapper">
+
+            <div data-reveal="left">
+              <h2 class="h2 section-title">Experience</h2>
+
+              <p class="section-text">
+                
+                In the heart of Silicon Valley, where computers first transformed the world, I had the honor of contributing to 
+                SLAC's mission of creating safe and resilient electrical grids through research on extreme weather for enhanced renewable energy.
+              </p>
+
+              <br/>
+
+              <div class="btn-wrapper" data-reveal="left" data-reveal-delay="1s">
+  
+                <a href="#" class="btn btn-primary">Read Research Paper</a>
+              </div>
+
+            </div>
+
+
+            <ul class="progress-list" data-reveal="right">
+
+              <div style="flex: 1;" data-reveal="left">
+                <figure>
+                  <!-- Embedded YouTube video -->
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/oxeknPHwEeU?si=QnxroPjky68wdui5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="flex: 1;"></iframe alt="Youtube" style="width: 100%; border-radius: 10px;">
+                </figure>
+              </div>
+
+
+              </div>
+            </li>  
+
+            <br/>
+
+            <div class="experience-grid">
+
+              <div class="experience-card" data-reveal="right">
+                <img src="./assets/images/cheers.jpg" alt="Research Intern" class="card-image">
+                <h3>Research</h3>
+                <p>SLAC National Accelerator Laboratory</p>
+                <a href="#" class="card-button">Learn More</a>
+              </div>
+
+              <div class="experience-card" data-reveal="right">
+                <img src="./assets/images/cheers.jpg" alt="INFORMS President" class="card-image">
+                <h3>Leadership</h3>
+                <p>President of Institute of Operations Research and Managment Sciences</p>
+                <a href="https://www.instagram.com/informs_pace/" class="card-button">Get Invovled</a>
+              </div>
+              
+              <div class="experience-card" data-reveal="right">
+                <img src="path/to/image3.jpg" alt="Women Empowerment" class="card-image">
+                <h3>Community</h3>
+                <p>Founder of Women Empowerment, JumpStart</p>
+                <a href="#" class="card-button">Learn More</a>
+              </div>
+
+              <div class="experience-card" data-reveal="right">
+                <img src="path/to/image3.jpg" alt="Women Empowerment" class="card-image">
+                <h3>Community</h3>
+                <p>Founder of Women Empowerment, JumpStart</p>
+                <a href="#" class="card-button">Learn More</a>
+              </div>
+              
+            </div>
+          </ul>
+
+        </div>
+      </section>
+ 
 
 
 
@@ -367,7 +485,7 @@
               <h2 class="h2 section-title" id="project-label">Portfolio</h2>
 
               <p class="section-text">
-                Discover some of my latest work!
+                Discover some of my latest projects!
               </p>
             </div>
 
@@ -382,47 +500,56 @@
 
                 <div class="card-content" data-reveal="left">
 
-                  <p class="card-tag" style="color: #a07cc5">Web Design</p>
+                  <p class="card-tag" style="color: #a07cc5">User Experince</p>
 
-                  <h3 class="h3 card-title">Snowlake Theme</h3>
+                  <h3 class="h3 card-title">Website Design</h3>
 
                   <p class="card-text">
-                    Maecenas faucibus mollis interdum sed posuere consectetur est at lobortis. Scelerisque id ligula
-                    porta felis euismod semper. Fusce dapibus tellus cursus.
+                    Designing user-friendly platforms with responsive layouts using HTML, CSS, and JavaScript to expand the adaptation of sustainable resources.
                   </p>
 
-                  <a href="#" class="btn-text" style="color: #a07cc5">
-                    <span class="span">See Project</span>
+                  <a href="https://batterycenter.slac.stanford.edu/" class="btn-text"  target="_blank" rel="noopener noreferrer"  style="color: #a07cc5">
+                    <span class="span">SLAC-Stanford</span>
 
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
 
+                  <a href="https://gismo.slac.stanford.edu/" class="btn-text"  target="_blank" rel="noopener noreferrer"  style="color: #a07cc5">
+                    <span class="span">Renewable Energy</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
                 </div>
 
                 <figure class="card-banner" data-reveal="right">
-                  <img src="./assets/images/project-1.png" width="650" height="370" loading="lazy" alt="Web Design"
+                  <img src="./assets/images/slac.png" width="650" height="370" loading="lazy" alt="Web Design"
                     class="w-100">
                 </figure>
 
               </div>
             </li>
 
-            <li>
+                        <li>
               <div class="project-card project-card-2" style="background-color: #f1f5fd">
 
                 <div class="card-content" data-reveal="right">
 
-                  <p class=" card-tag" style="color: #3f78e0">Data Analytics</p>
+                  <p class=" card-tag" style="color: #3f78e0">Research & Reports</p>
 
-                  <h3 class="h3 card-title">Marimo and REGROW</h3>
+                  <h3 class="h3 card-title">Data Analytics</h3>
 
                   <p class="card-text">
-                    Maecenas faucibus mollis interdum sed posuere consectetur est at lobortis. Scelerisque id ligula
-                    porta felis euismod semper. Fusce dapibus tellus cursus.
+                    Enhancing business performance with data-driven insights through forecasting and visualizations using Python, SQL, R, Excel, Tableau, and Google Analytics.
                   </p>
 
-                  <a href="#" class="btn-text" style="color: #3f78e0">
-                    <span class="span">See Project</span>
+                  <a href="https://marimo.sites.stanford.edu/" class="btn-text"  target="_blank" rel="noopener noreferrer" style="color: #3f78e0">
+                    <span class="span">marimo at Stanford</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                  <a href="https://marimo.sites.stanford.edu/blog/data-visualization" class="btn-text"  target="_blank" rel="noopener noreferrer" style="color: #3f78e0">
+                    <span class="span">Read Blog</span>
 
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
@@ -430,37 +557,42 @@
                 </div>
 
                 <figure class="card-banner" data-reveal="left">
-                  <img src="./assets/images/project-2.png" width="600" height="367" loading="lazy" alt="Web Design"
-                    class="w-100">
+                  <img src="./assets/images/regrow.gif" width="600" height="367" loading="lazy" alt="Web Design" class="w-100">
                 </figure>
 
               </div>
             </li>
 
             <li>
-              <div class="project-card project-card-3" style="background-color: #f5faf7">
+              <div class="project-card project-card-3"  target="_blank" rel="noopener noreferrer" style="background-color: #f5faf7">
 
                 <div class="card-content" data-reveal="left">
 
-                  <p class=" card-tag" style="color: #7cb798">Digtial Marketing</p>
+                  <p class=" card-tag" style="color: #7cb798">Graphic Design</p>
 
-                  <h3 class="h3 card-title">Missio Theme</h3>
+                  <h3 class="h3 card-title">Digtial Marketing</h3>
 
                   <p class="card-text">
-                    Maecenas faucibus mollis interdum sed posuere porta consectetur cursus porta lobortis. Scelerisque
-                    id ligula felis.
+                    Developed a user-friendly guide for TESS, an automated energy regulator, to make renewable energy accessible and easy to understand for homeowners, focusing on energy savings and practical benefits.
+
                   </p>
 
-                  <a href="#" class="btn-text" style="color: #7cb798">
-                    <span class="span">See Project</span>
+                  <a href="https://www.canva.com/design/DAFgsSLel8E/q1u12uTSfEgrS1q12E98cw/view?utm_content=DAFgsSLel8E&utm_campaign=designshare&utm_medium=link&utm_source=editor" class="btn-text"  target="_blank" rel="noopener noreferrer" style="color: #7cb798">
+                    <span class="span">Transactive Energy Service System</span>
 
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
 
+                  <a href="https://www.canva.com/design/DAFUr-YZt0I/reH7RhIx1Jf9DCKXKRvlHA/view?" class="btn-text"  target="_blank" rel="noopener noreferrer" style="color: #7cb798">
+                    <span class="span">Wall Street Journal</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+                  
                 </div>
 
                 <figure class="card-banner" data-reveal="right">
-                  <img src="./assets/images/project-3.png" width="600" height="367" loading="lazy" alt="Web Design"
+                  <img src="./assets/images/tess.png" width="600" height="367" loading="lazy" alt="Web Design"
                     class="w-100">
                 </figure>
 
@@ -477,12 +609,18 @@
                   <h3 class="h3 card-title">Code Managment</h3>
 
                   <p class="card-text">
-                    Maecenas faucibus mollis interdum sed posuere consectetur est at lobortis. Scelerisque id ligula
-                    porta felis euismod semper.
+                    Commercial release of the Linux Foundation’s simulation software for smart-grid and renewable energy tech. 
+                    Created a seamless code transfer system from SLAC to utility developers, providing researchers, planners, operators, and policymakers with essential resources and training materials.
                   </p>
 
-                  <a href="#" class="btn-text" style="color: #d16b86">
-                    <span class="span">See Project</span>
+                  <a href="https://www.grip.energy/" class="btn-text"  target="_blank" rel="noopener noreferrer" style="color: #d16b86">
+                    <span class="span">Grid Resilience & Intelligence Platform</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                  <a href="https://github.com/arras-energy/static-website" class="btn-text"  target="_blank" rel="noopener noreferrer" style="color: #d16b86">
+                    <span class="span">Linux Foundation's Arras Energy</span>
 
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
@@ -490,7 +628,7 @@
                 </div>
 
                 <figure class="card-banner" data-reveal="right">
-                  <img src="./assets/images/project-4.png" width="620" height="370" loading="lazy" alt="Mobile Design"
+                  <img src="./assets/images/arras.png" width="620" height="370" loading="lazy" alt="Mobile Design"
                     class="w-100">
                 </figure>
 
@@ -503,6 +641,63 @@
       </section>
 
 
+      <!-- 
+        - #FUN
+      -->
+
+      <section class="section about" aria-label="about">
+        <div class="container">
+
+            <div data-reveal="left">
+              <h2 class="h2 section-title">Beyond the Code</h2>
+
+              <p class="section-text">
+                When I'm not debugging... I love learning mixed martial arts, running long-distance, reading fantasy novels and filming cooking videos. 
+                For videos on self-improvement, healthy recipes, and lifestyle join me on YouTube!
+
+                I hope to share my journey and inspire you to continue trying new things everyday ✰ 
+              </p>
+            </div>
+
+            <br/>
+
+            <div class="btn-wrapper" data-reveal="top" data-reveal-delay="1s">
+              <a href="https://www.youtube.com/@melodyxnguyen" target="_blank" rel="noopener noreferrer"class="btn btn-primary">Watch Now</a>
+            </div>
+            <br/>
+
+            <br/>
+            <section class="gallery-section">
+              <div class="gallery">
+                <div class="gallery-item" data-reveal="right">
+                  <img src="./assets/images/noodles.JPG" loading="lazy" alt="Homemade noodles">
+                </div>
+                <div class="gallery-item" data-reveal="right">
+                  <img src="./assets/images/sunset.jpg" loading="lazy" alt="Hiking during Sunset">
+                </div>
+                <div class="gallery-item" data-reveal="right">
+                  <img src="./assets/images/strawberry.JPG" loading="lazy" alt="Strawberry candy">
+                </div>
+                <div class="gallery-item"data-reveal="right">
+                  <img src="./assets/images/vietnam.jpg"loading="lazy" alt="Travel">
+                </div>
+                <div class="gallery-item" data-reveal="right">
+                  <img src="./assets/images/surf.jpg" loading="lazy" alt="Surfing in California">
+                </div>
+                <div class="gallery-item" data-reveal="right">
+                  <img src="./assets/images/matcha.JPG" loading="lazy" alt="Asmr matcha">
+                </div>
+                <div class="gallery-item" data-reveal="right">
+                  <img src="./assets/images/woods.jpg" loading="lazy" alt="Santa Cruz">
+                </div>
+                <div class="gallery-item"data-reveal="right">
+                  <img src="./assets/images/tokyo.jpg" loading="lazy" alt="Food in tokyo">
+                </div>
+              </div>
+            </section>
+
+        </div>
+      </section>
 
 
 
@@ -524,12 +719,15 @@
               <h2 class="h2 section-title">Contact</h2>
 
               <p class="section-text">
-                Interested in collaborating? Feel free to reach out to me via email or connect on LinkedIn.
+                Interested in collaborating? Feel free to reach out via email or connect on LinkedIn.<br>
+
+                <br>Email: <b>melody.nguyen@pace.edu</b><br>
+                LinkedIn:<b> @melodyxnguyen</b><br>
               </p>
 
             </div>
 
-            <form action="" class="contact-form" data-reveal="right">
+            <form action="contact.php" method="POST" class="contact-form" data-reveal="right"> 
 
               <div class="input-wrapper">
                 <input type="text" name="name" placeholder="Name *" required class="input-field">
@@ -572,6 +770,12 @@
       </li>
 
       <li>
+        <a href="https://www.youtube.com/@melodyxnguyen" class="social-link" target="_blank" rel="noopener noreferrer">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+      </li>
+
+      <li>
         <a href="https://github.com/melodyxnguyen" class="social-link" target="_blank" rel="noopener noreferrer">
           <ion-icon name="logo-github"></ion-icon>
         </a>
@@ -580,12 +784,6 @@
       <li>
         <a href="https://medium.com/@melodyxnguyen" class="social-link" target="_blank" rel="noopener noreferrer">
           <ion-icon name="logo-medium"></ion-icon>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://www.youtube.com/@melodyxnguyen" class="social-link" target="_blank" rel="noopener noreferrer">
-          <ion-icon name="logo-youtube"></ion-icon>
         </a>
       </li>
 
