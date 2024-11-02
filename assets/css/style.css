@@ -310,6 +310,10 @@ body.nav-active { overflow: hidden; }
   opacity: 0.8;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 
 
