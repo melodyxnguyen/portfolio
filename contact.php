@@ -1,20 +1,35 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email_address'];
-    $message = $_POST['message'];
+    // Get form data
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email_address']);
+    $message = htmlspecialchars($_POST['message']);
 
+    // Recipient email address
     $to = "melody.nguyen@pace.edu";
-    $subject = "New Contact Form Submission";
-    $headers = "From: " . $email;
 
-    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+    // Email subject and headers
+    $subject = "New Contact Form Submission from $name";
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    // Send email
+    // Email body
+    $body = "Name: $name\n";
+    $body .= "Email: $email\n\n";
+    $body .= "Message:\n$message\n";
+
+    // Send the email
     if (mail($to, $subject, $body, $headers)) {
-        echo "Message sent successfully!";
+        // Redirect to a thank-you page or display a success message
+        echo "Thank you! Your message has been sent.";
     } else {
-        echo "Failed to send the message.";
+        // Display an error message if email sending fails
+        echo "Oops! Something went wrong, and we couldn’t send your message.";
     }
+} else {
+    // Redirect to the contact form if accessed directly
+    header("Location: index.html");
+    exit();
 }
 ?>
