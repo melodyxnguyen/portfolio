@@ -98,4 +98,24 @@ function prevSlide() {
   showSlide(currentSlide - 1);
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  const cards = document.querySelectorAll(".experience-card");
+
+  const revealCards = () => {
+    cards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+      const isVisible = cardTop < window.innerHeight - 50;
+      
+      if (isVisible) {
+        card.classList.add("reveal");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealCards);
+  revealCards(); // Initial call to reveal cards in view on load
+});
+
+
+
 
