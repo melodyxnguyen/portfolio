@@ -1062,121 +1062,88 @@ textarea.input-field {
   min-height: 75px;
   height: fit-content;
   width: 100%;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
+  margin: 0 auto;
   justify-content: flex-start;
 }
 
 .album .responsive-container-block.bg {
   max-width: 1320px;
-  margin: 0 0 0 0;
+  margin: 0 auto;
+  display: flex;
   justify-content: space-between;
 }
 
 .album .img {
   width: 100%;
-  margin: 0 0 20px 0;
-}
-
-.album #i9rb {
-  color: black;
-}
-
-.album #ir6i {
-  color: black;
-}
-
-.album #ikz3b {
-  color: black;
+  max-width: 100%; /* Prevents images from stretching beyond container */
+  margin-bottom: 20px;
+  height: auto; /* Maintains aspect ratio */
 }
 
 .album .responsive-container-block.img-cont {
+  display: flex;
   flex-direction: column;
-  max-width: 33.3%;
-  min-height: auto;
-  margin: 0 0 0 0;
-  height: 100%;
-}
-
-.album #ipix {
-  color: black;
-}
-
-.album #ipzoh {
-  color: black;
-}
-
-.album #ig5q8 {
-  color: black;
-}
-
-.album #imtzl {
-  color: black;
-}
-
-.album #i53es {
-  color: black;
+  width: 33.3%; /* Sets equal width for columns */
+  padding: 10px;
+  box-sizing: border-box; /* Ensures padding doesn’t affect width */
 }
 
 .album .img.img-big {
-  height: 50%;
-  margin: 0 0 16px 0;
+  width: 100%; /* Ensures big images use the full width of container */
+  height: auto;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 1024px) {
   .album .img {
-    margin: 0 0 18px 0;
+    margin-bottom: 18px;
   }
 }
 
 @media (max-width: 768px) {
   .album .img {
-    max-width: 32.5%;
-    margin: 0 0 0 0;
+    max-width: 100%;
+    margin-bottom: 15px;
   }
 
   .album .responsive-container-block.bg {
     flex-direction: column;
+    align-items: center;
   }
 
   .album .responsive-container-block.img-cont {
     max-width: 100%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .album .img.img-big {
-    max-width: 49%;
-    margin: 0 0 0 0;
+    max-width: 48%; /* Reduces width for better layout on smaller screens */
+    margin: 0 1% 15px 1%; /* Adds a small margin for spacing */
   }
 }
 
 @media (max-width: 500px) {
   .album .img {
-    max-width: 94%;
-    margin: 0 0 25px 0;
+    max-width: 90%;
+    margin-bottom: 25px;
   }
 
   .album .responsive-container-block.img-cont {
     flex-direction: column;
     align-items: center;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
   }
 
   .album .img.img-big {
-    max-width: 94%;
-    margin: 0 0 25px 0;
+    max-width: 90%;
+    margin-bottom: 25px;
   }
 
   .album .img.img-last {
-    margin: 0 0 5px 0;
+    margin-bottom: 5px;
   }
 }
