@@ -1057,93 +1057,38 @@ textarea.input-field {
   #Gallery 
 \*-----------------------------------*/
 
-
 .album .responsive-container-block {
   min-height: 75px;
   height: fit-content;
   width: 100%;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Automatically fills with balanced columns */
+  gap: 10px;
   margin: 0 auto;
-  justify-content: flex-start;
-}
-
-.album .responsive-container-block.bg {
-  max-width: 1320px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  max-width: 1200px; /* Centering content within a max width */
 }
 
 .album .img {
   width: 100%;
-  max-width: 100%; /* Prevents images from stretching beyond container */
-  margin-bottom: 20px;
-  height: auto; /* Maintains aspect ratio */
-}
-
-.album .responsive-container-block.img-cont {
-  display: flex;
-  flex-direction: column;
-  width: 33.3%; /* Sets equal width for columns */
-  padding: 10px;
-  box-sizing: border-box; /* Ensures padding doesn’t affect width */
-}
-
-.album .img.img-big {
-  width: 100%; /* Ensures big images use the full width of container */
   height: auto;
-  margin-bottom: 16px;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
 }
 
+.album .img:hover {
+  transform: scale(1.05); /* Adds a slight zoom effect on hover */
+}
+
+/* Responsive adjustments */
 @media (max-width: 1024px) {
-  .album .img {
-    margin-bottom: 18px;
+  .album .responsive-container-block {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjusts grid for smaller screens */
   }
 }
 
 @media (max-width: 768px) {
-  .album .img {
-    max-width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .album .responsive-container-block.bg {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .album .responsive-container-block.img-cont {
-    max-width: 100%;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .album .img.img-big {
-    max-width: 48%; /* Reduces width for better layout on smaller screens */
-    margin: 0 1% 15px 1%; /* Adds a small margin for spacing */
-  }
-}
-
-@media (max-width: 500px) {
-  .album .img {
-    max-width: 90%;
-    margin-bottom: 25px;
-  }
-
-  .album .responsive-container-block.img-cont {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .album .img.img-big {
-    max-width: 90%;
-    margin-bottom: 25px;
-  }
-
-  .album .img.img-last {
-    margin-bottom: 5px;
+  .album .responsive-container-block {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Keeps columns evenly spaced on mobile */
   }
 }
