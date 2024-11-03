@@ -1092,3 +1092,23 @@ textarea.input-field {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Keeps columns evenly spaced on mobile */
   }
 }
+
+
+@media (max-width: 768px) {
+  .album .responsive-container-block.bg {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px; /* Spacing between images */
+  }
+
+  .album .responsive-container-block.img-cont {
+    max-width: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .album .img {
+    width: 100%;
+    height: auto;
+  }
+}
