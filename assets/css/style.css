@@ -38,7 +38,7 @@
 
   /**
    * transition
-   */--transition-1: 0.25s ease;--transition-2: 0.5s ease;--transition-3: 0.3s ease-in-out;}
+   */--transition-1: 0.25s ease;--transition-2: 0.25s ease;--transition-3: 0.3s ease-in-out;}
 
 
 
@@ -193,7 +193,7 @@ body.nav-active { overflow: hidden; }
 
 [data-reveal] {
   opacity: 0;
-  transition: 0.75s ease;
+  transition: 0.5s ease;
 }
 
 [data-reveal="top"] { transform: translateY(-30px); }
@@ -411,7 +411,7 @@ html {
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
 .carousel-button {
