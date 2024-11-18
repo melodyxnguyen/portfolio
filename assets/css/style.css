@@ -1025,7 +1025,7 @@ textarea.input-field {
   padding: 5px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Automatically fills with balanced columns */
-  gap: 15px 5px; /* Increase this value to add more space between images */
+  gap: 13px 4px; /* Increase this value to add more space between images */
   margin: 0 auto;
   max-width: 1200px; /* Centering content within a max width */
 }
@@ -1034,7 +1034,7 @@ textarea.input-field {
 .album .img {
   width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 5px;
   transition: transform 0.3s ease;
 }
 
