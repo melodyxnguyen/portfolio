@@ -79,7 +79,7 @@ Ionicon
 ## Transition
 
 ``` css
---transition-1: 0.25s ease;
---transition-2: 0.5s ease;
---transition-3: 0.3s ease-in-out;
+--transition-1: 0.2s ease;
+--transition-2: 0.4s ease;
+--transition-3: 0.25s ease-in-out;
 ```
