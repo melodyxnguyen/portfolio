@@ -152,7 +152,7 @@ Send message
 
 #---------- FOOTER ----------#
 
-© 2022 by Melody. All rights reserved.
+© 2025 by Melody. All rights reserved.
 
 <ion-icon name="logo-linkedin"></ion-icon>
 <ion-icon name="logo-github"></ion-icon>
