@@ -1014,7 +1014,31 @@ textarea.input-field {
 
 
 
+@media (max-width: 768px) {
+  .about .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
 
+  .about .wrapper > div {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .carousel-container {
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  .section-text {
+    padding-right: 0;
+  }
+
+  .btn-wrapper {
+    justify-content: center;
+  }
+}
 
 
 /*-----------------------------------*\
