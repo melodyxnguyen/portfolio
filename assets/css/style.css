@@ -182,7 +182,10 @@ body.nav-active { overflow: hidden; }
   color: var(--white);
 }
 
-.section-text { font-size: var(--fs-5); }
+.section-text { 
+  font-size: var(--fs-5);
+  margin-bottom: 24px;
+}
 
 .section-title { margin-block-end: 16px; }
 
