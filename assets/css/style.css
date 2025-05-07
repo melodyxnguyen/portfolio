@@ -184,7 +184,7 @@ body.nav-active { overflow: hidden; }
 
 .section-text { 
   font-size: var(--fs-5);
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 .section-title { margin-block-end: 16px; }
