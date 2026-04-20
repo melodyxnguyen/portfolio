@@ -542,8 +542,6 @@ html {
 
 .experience-grid a:nth-child(-n+3) .card-image {
   object-fit: contain;
-  background-color: #fff;
-  padding: 8px;
 }
 
 .experience-card:hover {
