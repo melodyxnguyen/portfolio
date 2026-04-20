@@ -605,11 +605,14 @@ html {
 .project-card-1,
 .project-card-2,
 .project-card-6,
+.project-card-7,
 :is(.project-card-3, .project-card-4) .card-content { padding: var(--padding); }
 
 .project-card-1 { padding-block-end: 0; }
 
 .project-card-6 { padding-block-end: 0; }
+
+.project-card-7 { padding-block-end: 0; }
 
 .project-card-6 .card-banner {
   display: flex;
@@ -623,6 +626,59 @@ html {
   min-height: 340px;
   border-radius: var(--radius-8);
   display: block;
+}
+
+.project-card-7 .card-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  padding: var(--padding);
+}
+
+.project-card-7 .card-banner .skillsync-preview {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #7c3aed 100%);
+  border-radius: var(--radius-8);
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 32px;
+  color: white;
+  text-align: center;
+}
+
+.skillsync-preview .preview-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.skillsync-preview .preview-subtitle {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  max-width: 320px;
+}
+
+.skillsync-preview .preview-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.skillsync-preview .preview-tag {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .project :is(.project-card-3, .project-card-4) { gap: 0; }
@@ -943,18 +999,21 @@ textarea.input-field {
 
   .project-card-1,
   .project-card-2,
-  .project-card-6 {
+  .project-card-6,
+  .project-card-7 {
     flex-direction: row;
     align-items: flex-end;
   }
 
-  :is(.project-card-1, .project-card-2, .project-card-6) .card-content { width: 33.33%; }
+  :is(.project-card-1, .project-card-2, .project-card-6, .project-card-7) .card-content { width: 33.33%; }
 
-  :is(.project-card-1, .project-card-2, .project-card-6) .card-banner { width: 66.66%; }
+  :is(.project-card-1, .project-card-2, .project-card-6, .project-card-7) .card-banner { width: 66.66%; }
 
   .project-card-1 .card-content { padding-block-end: var(--padding); }
 
   .project-card-6 .card-content { padding-block-end: var(--padding); }
+
+  .project-card-7 .card-content { padding-block-end: var(--padding); }
 
   .project-card-2 .card-content { order: 1; }
 
