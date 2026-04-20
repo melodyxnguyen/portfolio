@@ -534,10 +534,16 @@ html {
 
 .card-image {
   width: 100%;
-  height: 120px; /* Adjusted image height */
+  height: 120px;
   object-fit: cover;
   border-radius: 5px;
   margin-bottom: 8px;
+}
+
+.experience-grid a:nth-child(-n+3) .card-image {
+  object-fit: contain;
+  background-color: #fff;
+  padding: 8px;
 }
 
 .experience-card:hover {
