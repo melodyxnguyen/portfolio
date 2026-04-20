@@ -611,6 +611,20 @@ html {
 
 .project-card-6 { padding-block-end: 0; }
 
+.project-card-6 .card-banner {
+  display: flex;
+  align-items: stretch;
+  min-height: 340px;
+}
+
+.project-card-6 .card-banner iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  border-radius: var(--radius-8);
+  display: block;
+}
+
 .project :is(.project-card-3, .project-card-4) { gap: 0; }
 
 .project-card .card-tag {
@@ -925,7 +939,7 @@ textarea.input-field {
   }
 
   .project .grid-list > li:nth-child(-n+2),
-  .project .grid-list > li:has(.project-card-6) { grid-column: 1 / 3; }
+  .project .grid-list > li.full-width-card { grid-column: 1 / 3; }
 
   .project-card-1,
   .project-card-2,
