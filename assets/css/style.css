@@ -527,6 +527,12 @@ html {
   padding: 10px;
 }
 
+.experience-grid > a {
+  flex: 1 1 200px;
+  max-width: 250px;
+  display: flex;
+}
+
 .experience-card {
   flex: 1 1 200px; /* Each card takes at least 200px width and is flexible */
   max-width: 250px; /* Maximum width for each card */
