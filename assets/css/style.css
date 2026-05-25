@@ -194,6 +194,10 @@ body.nav-active { overflow: hidden; }
   gap: 30px;
 }
 
+.about .grid-list > li {
+  display: flex;
+}
+
 [data-reveal] {
   opacity: 0;
   transition: 0.4s ease;
@@ -482,6 +486,10 @@ html {
   background-color: hsl(0deg 6.71% 97.11%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-card:hover {
