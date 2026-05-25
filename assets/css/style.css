@@ -474,7 +474,20 @@ html {
 
 .progress-fill { height: inherit; }
 
-.about-card { text-align: center; }
+.about-card {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 24px;
+  background-color: hsl(0deg 6.71% 97.11%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
 
 .about-card .card-icon {
   max-width: max-content;
