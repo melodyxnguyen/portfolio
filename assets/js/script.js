@@ -94,6 +94,10 @@ function showSlide(index) {
   if (caption) {
     caption.textContent = slides[currentSlide] && slides[currentSlide].alt ? slides[currentSlide].alt : '';
   }
+
+  if (autoplayEnabled) {
+    scheduleAutoplay();
+  }
 }
 
 function nextSlide() {
@@ -105,20 +109,30 @@ function prevSlide() {
 }
 
 // Carousel autoplay: advances slides automatically and pauses on hover
-let autoplayInterval = null;
-const AUTOPLAY_DELAY = 4000; // milliseconds
+let autoplayTimer = null;
+let autoplayEnabled = false;
+const FIRST_AUTOPLAY_DELAY = 8000; // milliseconds for first slide
+const AUTOPLAY_DELAY = 6000; // milliseconds for remaining slides
+
+function scheduleAutoplay() {
+  if (!autoplayEnabled) return;
+  stopAutoplay();
+  const delay = currentSlide === 0 ? FIRST_AUTOPLAY_DELAY : AUTOPLAY_DELAY;
+  autoplayTimer = setTimeout(() => {
+    nextSlide();
+  }, delay);
+}
 
 function startAutoplay() {
-  stopAutoplay();
-  autoplayInterval = setInterval(() => {
-    nextSlide();
-  }, AUTOPLAY_DELAY);
+  autoplayEnabled = true;
+  scheduleAutoplay();
 }
 
 function stopAutoplay() {
-  if (autoplayInterval) {
-    clearInterval(autoplayInterval);
-    autoplayInterval = null;
+  autoplayEnabled = false;
+  if (autoplayTimer) {
+    clearTimeout(autoplayTimer);
+    autoplayTimer = null;
   }
 }
 
