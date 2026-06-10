@@ -80,14 +80,20 @@ function showSlide(index) {
   const caption = document.getElementById('carousel-caption');
   const totalSlides = slides.length;
 
+  if (totalSlides === 0) return; // nothing to show
+
   // Wrap around if index goes out of bounds
   currentSlide = (index + totalSlides) % totalSlides;
 
   // Move the track to show the current slide
-  track.style.transform = `translateX(-${currentSlide * 100}%)`;
+  if (track) {
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
 
-  // Update caption text based on the current slide's alt text
-  caption.textContent = slides[currentSlide].alt;
+  // Update caption text based on the current slide's alt text (if present)
+  if (caption) {
+    caption.textContent = slides[currentSlide] && slides[currentSlide].alt ? slides[currentSlide].alt : '';
+  }
 }
 
 function nextSlide() {
@@ -96,6 +102,24 @@ function nextSlide() {
 
 function prevSlide() {
   showSlide(currentSlide - 1);
+}
+
+// Carousel autoplay: advances slides automatically and pauses on hover
+let autoplayInterval = null;
+const AUTOPLAY_DELAY = 4000; // milliseconds
+
+function startAutoplay() {
+  stopAutoplay();
+  autoplayInterval = setInterval(() => {
+    nextSlide();
+  }, AUTOPLAY_DELAY);
+}
+
+function stopAutoplay() {
+  if (autoplayInterval) {
+    clearInterval(autoplayInterval);
+    autoplayInterval = null;
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -114,6 +138,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
   window.addEventListener("scroll", revealCards);
   revealCards(); // Initial call to reveal cards in view on load
+  // Initialize carousel state and autoplay if carousel exists
+  const slides = document.querySelectorAll('.carousel-slide');
+  const carousel = document.querySelector('.carousel');
+  if (slides.length && carousel) {
+    showSlide(0);
+    startAutoplay();
+
+    // Pause autoplay on hover/focus for accessibility
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    carousel.addEventListener('focusin', stopAutoplay);
+    carousel.addEventListener('focusout', startAutoplay);
+  }
 });
 
 

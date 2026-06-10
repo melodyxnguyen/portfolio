@@ -406,6 +406,7 @@ html {
   width: 100%; /* Ensures the image fills the container width */
   height: auto; /* Maintains the aspect ratio */
   object-fit: cover; /* Fills the container while cropping the excess */
+  flex: 0 0 100%; /* Keep each slide full-width inside the flex track */
 }
 
 .carousel-track-container {
@@ -418,7 +419,8 @@ html {
 
 .carousel-track {
   display: flex;
-  transition: transform 0.3s ease;
+  transition: transform 0.75s cubic-bezier(.22,.8,.36,1);
+  will-change: transform;
 }
 
 .carousel-button {
@@ -457,6 +459,32 @@ html {
   display: grid;
   gap: 50px;
   margin-block-end: 50px;
+}
+
+@media (max-width: 900px) {
+  #Intro .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  /* Ensure child blocks take full width when stacked */
+  #Intro .wrapper > div {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Make the carousel centered and adaptive */
+  .carousel-container {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .carousel-track-container {
+    max-width: 540px;
+    height: auto;
+  }
 }
 
 .progress-list .label-wrapper {
@@ -516,6 +544,7 @@ html {
   justify-content: flex-start; /* Aligns buttons to the left */
   gap: 10px; /* Adjusts spacing between buttons */
 }
+
 
 
 
